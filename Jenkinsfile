@@ -25,6 +25,7 @@ pipeline {
             steps {
                 sh 'whoami'
                 sh '/bin/bash ./jenkins/scripts/deliver.sh' 
+                sh 'nohup java -jar target/spordniar-app-0.0.1-SNAPSHOT.jar'
             }
         }
     }
